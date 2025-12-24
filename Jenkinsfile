@@ -5,7 +5,7 @@ pipeline {
         }
     }
     environment {
-        user = Raj
+        USER = "Raj"
     }
     
     stages {
@@ -14,7 +14,7 @@ pipeline {
                 script{
                     sh """
                         echo "Build"
-                        $user
+                        echo $USER
                     """
                 }
                 
