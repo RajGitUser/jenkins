@@ -4,6 +4,9 @@ pipeline {
             label 'AGENT-1'
         }
     }
+    environment {
+        user = Raj
+    }
     
     stages {
         stage("Build") {
@@ -11,6 +14,7 @@ pipeline {
                 script{
                     sh """
                         echo "Build"
+                        $user
                     """
                 }
                 
